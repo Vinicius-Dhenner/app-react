@@ -1,0 +1,21 @@
+.users {
+    width: 300px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.texts h1 {
+    color: black;
+    font-size: 5;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

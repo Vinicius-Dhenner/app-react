@@ -1,0 +1,18 @@
+.gallery-btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 75px;
+    padding-right: 75px;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
