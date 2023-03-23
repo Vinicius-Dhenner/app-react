@@ -1,28 +1,37 @@
+import { useEffect, useState } from 'react'
+import { ContactCard } from '../../components/ContactCard'
+import { Contactlist } from '../../components/ContactList'
+import { Title } from '../../components/Title'
+import { getContacts } from '../../../services/api'
 import './style.css'
-import { Title } from '../../components/Title';
-import { Search } from '../../components/Search';
-import { Users } from '../../components/Users';
-import { users } from './services/api';
-
-const api = users;
-
-let position = 0;
-function positionApi () {
-    return position++;
-}
 
 export function Contacts () {
+    const [search, setSearch] = useState('')
+    const [contacts, setContacts] = useState([])
+
+
+    useEffect(() => {
+        async function listContacts () {
+            setContacts(await getContacts())
+        }
+        listContacts()
+    }, []) 
+
     return (
         <>
-            <div className="contacts">
-                <Title text="Agenda de Contatos" />
-                <Search/>
-                <Users name={api[positionApi()].first + " " + api[positionApi()].last} email={api[positionApi()].email}/>
-                <Users name={api[positionApi()].first + " " + api[positionApi()].last} email={api[positionApi()].email}/>
-                <Users name={api[positionApi()].first + " " + api[positionApi()].last} email={api[positionApi()].email}/>
-                <Users name={api[positionApi()].first + " " + api[positionApi()].last} email={api[positionApi()].email}/>
-                <Users name={api[positionApi()].first + " " + api[positionApi()].last} email={api[positionApi()].email}/>
-            </div>
+            <header>
+                <Title text="Agenda de Contatos"/>
+            </header>
+            <main>
+            <input type="search" className="inputSearch" onInput={(event) => setSearch(event.target.value)} />
+                <Contactlist>
+                    {
+                        contacts.map(contact => {
+                            return <ContactCard contactData={contact}/>
+                        })
+                    }
+                </Contactlist>
+            </main>
         </>
     )
 }

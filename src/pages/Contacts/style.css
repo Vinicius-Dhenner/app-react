@@ -14,3 +14,12 @@
 .contacts input {
     margin-top: 20px;
 }
+
+.inputSearch {
+    outline: none;
+    display: flex;
+    padding: 5px;
+    width: 350px;
+    background-color: white;
+    color: gray;
+}
