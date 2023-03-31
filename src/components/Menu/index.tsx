@@ -1,15 +1,15 @@
-import './style.css'
+import './styles.css';
 
 type MenuProps = {
-    children: React.ReactNode /* ESTÁ PEGANDO UM TSX */
+  children: React.ReactNode
 }
 
-export function Menu ({children} : MenuProps) {
-    return (
-        <>
-            <div className="menu">
-                {children}
-            </div>
-        </>
-    )
+export function Menu({ children }: MenuProps) {
+  return (
+    <>
+      <div className='menu'>
+        {children}
+      </div>
+    </>
+  )
 }

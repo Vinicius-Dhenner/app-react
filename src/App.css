@@ -12,9 +12,7 @@ html,body{
 body{
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
-h1{
-  color: white;
-}
+
 #App{
   padding: 10px;
   display: flex;
@@ -41,20 +39,4 @@ main{
   gap: 10px;
   width: 100%;
  
-}
-form{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-form h2{
-  text-align: center;
-  color:#c2b1d3;
-}
-form input{
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 0;
-  outline: none;
 }

@@ -14,7 +14,7 @@ export const movies = [
     },
     {
         "id": 2,
-        "title": "Não! Não Olhe",
+        "title": "Não!Não Olhe",
         "releaseDate": "25/08/2022",
         "synopsis": "Em Não! Não Olhe!, novo filme de terror do diretor Jordan Peele (Corra e Nós), uma cidade do interior da Califórnia começa a ter eventos bizarros e aparentemente extraterrestres. Os irmãos interpretados por Keke Palmer (‘True Jackson’) e Daniel Kaluuya (‘Corra’) possuem um rancho de cavalos e são vizinhos de um parque de diversões de uma série de televisão do personagem interpretado por Steven Yeun, inspirada no velho oeste. Os dois então são testemunhas de eventos bizarros e UFOs.",
         "categoryId": 1,

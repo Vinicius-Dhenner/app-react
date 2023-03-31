@@ -1,23 +1,30 @@
-import './style.css';
-import { Contact } from '../../types';
+import './styles.css'
+import { Button } from '../Button';
+import { Contact } from '../../Types';
+import { ButtonIU } from '../ButtonUI';
 
 type ContactCardProps = {
-    contactData : Contact
+  contactData: Contact,
 }
 
-export function ContactCard ({contactData} : ContactCardProps) {
-    const contact = contactData;
-    return (
-        <>
-            <div className="contactCard">
-                <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="" />
-                <div className="contactInformations">
-                    <h2>{}</h2>
-                    <p>
-                        props.email
-                    </p>
-                </div>
-            </div>
-        </>
-    );
+
+export function ContactCard({ contactData }: ContactCardProps) {
+  const { name, email, picture } = contactData;
+  return (
+    <>
+      <section className="contactCard">
+        <div>
+          <img src={picture.medium} alt="" />
+        </div>
+        <div className='dadosContatos'>
+          <div>
+            <p>{name.first}</p>
+            <p>{email}</p>
+            {/* <Button text="Detalhes" type='primary' /> */}
+            <ButtonIU text="Detalhes" />
+          </div>
+        </div>
+      </section>
+    </>
+  )
 }
